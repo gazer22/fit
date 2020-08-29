@@ -5,3 +5,4 @@ decode_fit_file <- function(f1) {
     .Call('_fit_decode_fit_file', PACKAGE = 'fit', f1)
 }
 
+
