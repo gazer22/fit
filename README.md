@@ -36,7 +36,8 @@ The first step is to extract the file from the GPS device. On my Garmin Edge 500
 
 ```r
 library(fit)
-data <- read.fit('examples/mt_beauty.fit')
+data <- read.fit('examples/mt_beauty.fit') # not implemented??
+data <- decode_fit_file('examples/mt_beauty.fit')
 ```
 The names of the available data tables can be found using `names()`. 
 
@@ -48,7 +49,7 @@ names(data)
 ## [1] "file_id"      "session"      "lap"          "record"       "event"        "device_info"  "activity"     "file_creator"
 ## [9] "unknown"
 ```
-The device provides status updates as `record` messages every few seconds, so to analyse a ride we want to use the `record` table:
+The device provides status updates as `record` messages every few seconds, so to analyze a ride we want to use the `record` table:
 
 ```r
 head(data$record)
